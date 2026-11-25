@@ -5,19 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#f8ecd8">
 <title>Abhishek &amp; Anjusha Wedding</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Cinzel+Decorative:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Cinzel+Decorative:wght@400;700&family=Great+Vibes&family=Alex+Brush&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fbf1e1;--card:#fffaf0;--ink:#3b3a2c;--muted:#6f6a55;--gold:#b08a3e;--line:rgba(176,138,62,.5);--blue:#1f4e79;--pink:#df7d9c;--leaf:#5f7a46;color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d2318;--card:#283021;--ink:#f4ead6;--muted:#cbc3a6;--gold:#d6b25e;--line:rgba(214,178,94,.5);--blue:#9cc3ea;--pink:#ee9db7}}
-:root[data-theme="dark"]{--bg:#1d2318;--card:#283021;--ink:#f4ead6;--muted:#cbc3a6;--gold:#d6b25e;--line:rgba(214,178,94,.5);--blue:#9cc3ea;--pink:#ee9db7}
+:root{--bg:#fbf1e1;--card:#fffaf0;--ink:#3b3a2c;--muted:#6f6a55;--gold:#b08a3e;--line:rgba(176,138,62,.5);--blue:#1f4e79;--pink:#df7d9c;--leaf:#5f7a46;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;line-height:1.5;text-align:center;overflow-x:hidden}
 body.lock{overflow:hidden;height:100%}
 .disp{font-family:'Cinzel Decorative',Georgia,serif}
 .script{font-family:'Great Vibes','Brush Script MT',cursive;font-weight:400}
+.cp{font-family:'Alex Brush','Great Vibes',cursive;font-size:1.12em}
 /* hero card uses the illustration; its own cream is fixed so text colours here are fixed too */
 .hero{max-width:480px;margin:0 auto;position:relative;aspect-ratio:2/3;background:#fbf1e1 url("hero.jpg") center/100% 100% no-repeat;color:#3b3a2c}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:48px;background:linear-gradient(transparent,var(--bg))}
 .ht{position:absolute;left:20%;right:20%;top:13%;display:flex;flex-direction:column;align-items:center}
 .ht .om{font-size:min(6vw,26px);color:#b08a3e;line-height:1}
 .ht small{font-size:min(2.5vw,11px);letter-spacing:.22em;margin:4px 0 0;color:#6f6a55}
@@ -47,7 +47,8 @@ footer{padding:20px 22px 90px;color:var(--muted);font-size:17px}
 #cover.open{opacity:0;transform:scale(1.12);pointer-events:none}
 #cover.gone{display:none}
 .bgb{position:absolute;inset:-40px;background:url("cover.jpg") center/cover no-repeat;filter:blur(22px)}
-.frame{position:absolute;inset:0;margin:auto;height:min(100svh,150.6vw);width:min(100vw,66.4svh);background:url("cover.jpg") center/100% 100% no-repeat;container-type:inline-size;animation:zm 16s ease-in-out infinite alternate;box-shadow:0 0 40px rgba(60,40,10,.3)}
+.frame{position:absolute;inset:0;background:url("cover.jpg") center/cover no-repeat;container-type:inline-size;animation:zm 16s ease-in-out infinite alternate}
+@media (min-aspect-ratio:2/3){.frame{margin:auto;height:min(100svh,150.6vw);width:min(100vw,66.4svh);background-size:100% 100%;box-shadow:0 0 40px rgba(60,40,10,.3)}}
 @keyframes zm{from{transform:scale(1)}to{transform:scale(1.035)}}
 #embers{position:absolute;inset:0;z-index:1;pointer-events:none}
 .em{position:absolute;bottom:-10px;border-radius:50%;background:#e0a233;box-shadow:0 0 8px 2px #f2c46a;opacity:0;animation:rise linear infinite}
@@ -65,7 +66,7 @@ footer{padding:20px 22px 90px;color:var(--muted);font-size:17px}
 @keyframes glow{50%{box-shadow:0 0 18px rgba(224,162,51,.8)}}
 @media (prefers-reduced-motion:reduce){.em,#embers .p{display:none}.frame{animation:none}}
 #petals{position:fixed;inset:0;pointer-events:none;z-index:40;overflow:hidden}
-.p{position:absolute;top:-30px;width:11px;height:15px;background:var(--pink);border-radius:100% 0 100% 0;opacity:.65;animation:fall linear infinite}
+.p{position:absolute;top:-30px;width:11px;height:15px;background:var(--pink);border-radius:100% 0 100% 0;opacity:.5;animation:fall linear infinite}
 .p.g{background:var(--gold);width:6px;height:6px;border-radius:50%}
 @keyframes fall{to{transform:translate(var(--dx),110vh) rotate(540deg)}}
 #mus{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:70;width:46px;height:46px;border-radius:50%;border:1px solid var(--gold);background:var(--card);color:var(--gold);font-size:20px;cursor:pointer;display:none}
@@ -82,7 +83,7 @@ footer{padding:20px 22px 90px;color:var(--muted);font-size:17px}
       <div class="top">
         <div class="om">ॐ</div>
         <small>WITH THE BLESSINGS OF OUR FAMILIES</small>
-        <div class="names script">Abhishek<i>weds</i>Anjusha</div>
+        <div class="names script"><span class="cp">A</span>bhishek<i>weds</i><span class="cp">A</span>njusha</div>
         <small>SUNDAY · 31 JANUARY 2027</small>
       </div>
       <div class="bot">
@@ -101,9 +102,9 @@ footer{padding:20px 22px 90px;color:var(--muted);font-size:17px}
   <div class="ht">
     <div class="om">ॐ</div>
     <small>WITH THE BLESSINGS OF OUR FAMILIES</small>
-    <div class="n script">Abhishek</div>
+    <div class="n script"><span class="cp">A</span>bhishek</div>
     <div class="a script">weds</div>
-    <div class="n script">Anjusha</div>
+    <div class="n script"><span class="cp">A</span>njusha</div>
     <div class="d">SUNDAY · 31 JANUARY 2027</div>
     <div class="t">Muhurtham 11:15 AM</div>
   </div>
@@ -112,13 +113,13 @@ footer{padding:20px 22px 90px;color:var(--muted);font-size:17px}
 <section>
   <h2 class="rv">Together with our families</h2>
   <div class="card rv">
-    <h3 class="script" style="font-size:42px;font-weight:400">Abhishek</h3>
+    <h3 class="script" style="font-size:42px;font-weight:400"><span class="cp">A</span>bhishek</h3>
     <p>S/o Mrs. Bini Vijayan<br>&amp; Late Vijayan Naduthodi (Army Retd.)</p>
     <p class="small">“Sreedevi”, Ullelummeethal, Chevayur P.O,<br>Thondayad, Kozhikode<br>Ph: 9526125061, 9809929618</p>
   </div>
   <div class="orn rv">❀ ❀ ❀</div>
   <div class="card rv">
-    <h3 class="script" style="font-size:42px;font-weight:400">Anjusha</h3>
+    <h3 class="script" style="font-size:42px;font-weight:400"><span class="cp">A</span>njusha</h3>
     <p>D/o Sanil Kumar K.T.<br>&amp; Sakunthala Sanil</p>
     <p class="small">Puthiyottil (H), Kaloor Thottooli, Kottooli P.O</p>
   </div>
