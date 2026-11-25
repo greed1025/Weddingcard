@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f0e5">
+  <meta name="description" content="The wedding celebration of Abhishek and Anjusha — 31 January 2027, Kozhikode.">
+  <title>Abhishek & Anjusha — Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="welcome-screen" id="welcome">
+    <div class="welcome-card">
+      <div class="welcome-wreath">❧ &nbsp; ✦ &nbsp; ❧</div>
+      <p class="eyebrow">YOU ARE CORDIALLY INVITED</p>
+      <div class="welcome-monogram">A <span>&</span> A</div>
+      <p class="welcome-names">Abhishek <i>&</i> Anjusha</p>
+      <p class="welcome-date">31 JANUARY 2027</p>
+      <button class="open-invite" id="openInvite">OPEN INVITATION <span>↗</span></button>
+      <div class="welcome-wreath bottom">❧ &nbsp; ✦ &nbsp; ❧</div>
+    </div>
+  </div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Abhishek and Anjusha home">A <span>✦</span> A</a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="nav">
+      <a href="#story">The Invitation</a>
+      <a href="#events">Celebrations</a>
+      <a href="#venue">The Venue</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-ornament ornament-left">❧</div>
+      <div class="hero-ornament ornament-right">❧</div>
+      <p class="eyebrow reveal">A NEW CHAPTER BEGINS</p>
+      <div class="monogram reveal" aria-label="A and A monogram">
+        <span class="monogram-a">A</span><span class="monogram-amp">&</span><span class="monogram-a second">A</span>
+        <svg viewBox="0 0 300 72" aria-hidden="true"><path d="M8 38 C55 4 90 8 150 36 C210 64 245 68 292 34" /><path d="M30 45 C55 20 72 18 95 27 M270 44 C245 20 228 18 205 27"/></svg>
+      </div>
+      <p class="eyebrow reveal">WITH THE BLESSINGS OF OUR FAMILIES</p>
+      <h1 class="hero-names reveal">Abhishek <em>&</em><br> Anjusha</h1>
+      <p class="hero-sub reveal">joyfully invite you to celebrate their wedding</p>
+      <div class="hero-date reveal"><span>31</span><i></i><span>JANUARY</span><i></i><span>2027</span></div>
+      <button class="scroll-cue reveal" onclick="document.querySelector('#story').scrollIntoView({behavior:'smooth'})">SCROLL TO EXPLORE <span>↓</span></button>
+      <div class="hero-bottom">KOZHIKODE · KERALA</div>
+    </section>
+
+    <section class="intro section" id="story">
+      <div class="section-kicker reveal">THE INVITATION</div>
+      <div class="flourish reveal">✦</div>
+      <h2 class="section-title reveal">Together with our families</h2>
+      <p class="invitation-copy reveal">
+        Mrs. Bini Vijayan and Late Vijayan Naduthodi (Army Retd.)<br>
+        cordially invite you and your family to grace the auspicious occasion
+        of their son’s wedding with your esteemed presence and blessings.
+      </p>
+      <div class="couple-script reveal">Abhishek <span>weds</span> Anjusha</div>
+      <div class="family-details reveal">
+        <div><span class="small-label">GROOM</span><p>Abhishek</p></div>
+        <div class="family-divider">✧</div>
+        <div><span class="small-label">BRIDE</span><p>Anjusha</p></div>
+      </div>
+      <p class="blessing reveal">Your presence will make our celebration complete.</p>
+    </section>
+
+    <section class="countdown-section">
+      <div class="countdown-inner">
+        <p class="section-kicker reveal">THE BIG DAY</p>
+        <h2 class="countdown-heading reveal">A day to remember</h2>
+        <div class="countdown" id="countdown" aria-live="polite">
+          <div><strong id="days">---</strong><span>DAYS</span></div>
+          <i>:</i><div><strong id="hours">--</strong><span>HOURS</span></div>
+          <i>:</i><div><strong id="minutes">--</strong><span>MINUTES</span></div>
+          <i>:</i><div><strong id="seconds">--</strong><span>SECONDS</span></div>
+        </div>
+        <p class="countdown-note">Until we say “I do”</p>
+      </div>
+    </section>
+
+    <section class="events section" id="events">
+      <div class="section-kicker reveal">SAVE THE DATE</div>
+      <div class="flourish reveal">✦</div>
+      <h2 class="section-title reveal">The celebrations</h2>
+      <p class="section-intro reveal">Two gatherings, one beautiful beginning. We would love to celebrate with you.</p>
+      <div class="event-grid">
+        <article class="event-card reveal">
+          <div class="event-number">01</div>
+          <p class="event-type">THE WEDDING CEREMONY</p>
+          <h3>Wedding Day</h3>
+          <div class="event-date">Sunday <b>31</b> January 2027</div>
+          <div class="event-rule"></div>
+          <p class="event-time">MUHURTHAM</p>
+          <p class="event-time-strong">11:15 AM – 12:00 PM</p>
+          <p class="event-place">Deshaposhini Community Hall<br>Kuthiravattom, Calicut</p>
+          <a class="text-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Deshaposhini+Community+Hall+Kuthiravattom+Kozhikode">VIEW LOCATION ↗</a>
+        </article>
+        <article class="event-card reception reveal">
+          <div class="event-number">02</div>
+          <p class="event-type">THE RECEPTION</p>
+          <h3>Reception</h3>
+          <div class="event-date">Monday <b>01</b> February 2027</div>
+          <div class="event-rule"></div>
+          <p class="event-time">EVENING CELEBRATION</p>
+          <p class="event-time-strong">5:00 PM – 9:00 PM</p>
+          <p class="event-place">Deshaposhini Community Hall<br>Kuthiravattom, Calicut</p>
+          <a class="text-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Deshaposhini+Community+Hall+Kuthiravattom+Kozhikode">VIEW LOCATION ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="venue section" id="venue">
+      <div class="section-kicker reveal">FIND US HERE</div>
+      <div class="flourish reveal">✦</div>
+      <h2 class="section-title reveal">The venue</h2>
+      <div class="venue-card reveal">
+        <div class="venue-emblem">⌖</div>
+        <h3>Deshaposhini Community Hall</h3>
+        <p>Kuthiravattom, Calicut<br>Kerala, India</p>
+        <a class="map-button" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Deshaposhini+Community+Hall+Kuthiravattom+Kozhikode">OPEN IN GOOGLE MAPS <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="closing-ornament">❧</div>
+      <p class="section-kicker">WITH LOVE & BLESSINGS</p>
+      <h2>We look forward<br>to celebrating with you.</h2>
+      <div class="closing-names">Abhishek <span>&</span> Anjusha</div>
+      <p class="compliments">Best compliments from<br><strong>Abhinand N. & Family</strong></p>
+      <div class="closing-date">31.01.2027 — 01.02.2027</div>
+    </section>
+  </main>
+
+  <footer>MADE WITH LOVE · ABHISHEK & ANJUSHA · 2027</footer>
+  <script src="script.js"></script>
+</body>
+</html>
