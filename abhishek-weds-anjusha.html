@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#3a0f27">
+<title>Abhishek &amp; Anjusha Wedding</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#2e0b20;--panel:#3a0f27;--pat:#5b1a3d;--ink:#f6e3d3;--rose:#e9b99f;--muted:#d3b2a6;--line:rgba(233,185,159,.45);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;line-height:1.5;text-align:center;overflow-x:hidden}
+body.lock{overflow:hidden;height:100%}
+.disp{font-family:'Cinzel Decorative',Georgia,serif;letter-spacing:.04em}
+.edge{height:30px;background:
+radial-gradient(circle at 50% 100%,transparent 11px,var(--rose) 12px,var(--rose) 13px,transparent 14px) 0 0/34px 30px repeat-x,
+radial-gradient(circle at 50% 0,var(--rose) 3px,transparent 4px) 0 4px/34px 30px repeat-x}
+section{max-width:620px;margin:0 auto;padding:54px 22px}
+.arch{background:var(--panel);border:1px solid var(--line);border-radius:260px 260px 14px 14px;padding:70px 22px 40px;box-shadow:0 0 0 8px rgba(91,26,61,.6)}
+h2{font-size:14px;letter-spacing:.35em;text-transform:uppercase;color:var(--rose);font-weight:600;margin:0 0 20px}
+.rule{height:1px;background:var(--line);margin:22px auto;max-width:340px}
+.names{font-size:clamp(34px,10vw,56px);line-height:1.15;margin:6px 0;color:var(--ink)}
+.amp{font-size:28px;color:var(--rose)}
+.small{font-size:16px;color:var(--muted);font-style:italic}
+.date{display:flex;align-items:center;justify-content:center;gap:16px;margin:10px 0}
+.date b{font-size:64px;line-height:1;color:var(--ink)}
+.date span{font-size:15px;letter-spacing:.25em;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:6px 10px;color:var(--rose)}
+.card{border:1px solid var(--line);border-radius:14px;padding:24px 18px;margin-bottom:16px;background:rgba(58,15,39,.7)}
+.card h3{margin:0 0 6px;font-size:22px;color:var(--rose);font-weight:600;letter-spacing:.08em}
+.card p{margin:3px 0;color:var(--muted)}
+.card .big{color:var(--ink);font-size:22px}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.cd div{border:1px solid var(--line);border-radius:12px;padding:14px 2px;background:var(--panel)}
+.cd b{display:block;font-size:32px;color:var(--ink);font-weight:600}
+.cd span{font-size:11px;letter-spacing:.2em;color:var(--rose)}
+.btn{display:inline-block;margin-top:18px;border:1px solid var(--rose);color:var(--ink);padding:11px 26px;border-radius:30px;text-decoration:none;letter-spacing:.2em;font-size:13px;font-weight:600;background:transparent;font-family:inherit;cursor:pointer}
+.btn.fill{background:var(--rose);color:#3a0f27}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center}
+.hero .arch{margin-top:10px}
+.om{font-size:44px;color:var(--rose);line-height:1}
+.rv{opacity:0;transform:translateY(34px);transition:opacity 1s ease,transform 1s ease}
+.rv.in{opacity:1;transform:none}
+footer{padding:30px 22px 90px;color:var(--muted);font-size:17px}
+/* cover doors */
+#cover{position:fixed;inset:0;z-index:60;display:flex;pointer-events:auto}
+.door{flex:1;background:var(--panel) linear-gradient(90deg,rgba(0,0,0,.25),transparent);transition:transform 1.6s cubic-bezier(.7,0,.2,1);border-right:1px solid var(--line)}
+.door.r{border-right:0;border-left:1px solid var(--line)}
+#cover.open .door:first-child{transform:translateX(-101%)}
+#cover.open .door.r{transform:translateX(101%)}
+#cover.open .cc{opacity:0;transform:scale(.9)}
+.cc{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;cursor:pointer;transition:all .6s ease}
+.cc .names{font-size:clamp(32px,9vw,50px)}
+.tap{margin-top:30px;border:1px solid var(--rose);padding:10px 26px;border-radius:30px;letter-spacing:.25em;font-size:13px;color:var(--rose);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.45}}
+#cover.gone{display:none}
+/* petals */
+#petals{position:fixed;inset:0;pointer-events:none;z-index:40;overflow:hidden}
+.p{position:absolute;top:-30px;width:10px;height:14px;background:var(--rose);border-radius:100% 0 100% 0;opacity:.7;animation:fall linear infinite}
+@keyframes fall{to{transform:translate(var(--dx),110vh) rotate(540deg)}}
+#mus{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:70;width:46px;height:46px;border-radius:50%;border:1px solid var(--rose);background:var(--panel);color:var(--rose);font-size:20px;cursor:pointer;display:none}
+@media (prefers-reduced-motion:reduce){.p{display:none}.rv{transition:none;opacity:1;transform:none}}
+</style>
+</head>
+<body class="lock">
+
+<div id="cover">
+  <div class="door"></div><div class="door r"></div>
+  <div class="cc" onclick="openInvite()">
+    <div class="om">ॐ</div>
+    <p style="letter-spacing:.3em;font-size:13px;color:var(--rose)">YOU ARE INVITED TO THE WEDDING OF</p>
+    <div class="names disp">Abhishek<br><span class="amp">&amp;</span><br>Anjusha</div>
+    <p style="letter-spacing:.3em;font-size:14px">31 · 01 · 2027</p>
+    <div class="tap">TAP TO OPEN</div>
+  </div>
+</div>
+
+<div id="petals"></div>
+<audio id="song" loop preload="none" src="song.mp3"></audio>
+<button id="mus" aria-label="Toggle music" onclick="toggleMusic()">♪</button>
+
+<div class="edge"></div>
+
+<section class="hero">
+  <div class="arch rv">
+    <div class="om">ॐ</div>
+    <p style="font-size:18px;margin:14px 0 4px"><b>Mrs. Bini Vijayan &amp; Late Vijayan Naduthodi (Army Retd.)</b></p>
+    <p class="small" style="margin:0">“Sreedevi”, Ullelummeethal, Chevayur P.O,<br>Thondayad, Kozhikode · Ph: 9526125061, 9809929618</p>
+    <p style="margin:18px 0">Cordially invite you and your family to grace the auspicious occasion of our son’s wedding with your esteemed presence and blessings.</p>
+    <div class="names disp">Abhishek</div>
+    <div class="amp disp">&amp;</div>
+    <div class="names disp">Anjusha</div>
+    <p style="margin:12px 0 0;font-size:18px">D/o Sanil Kumar K.T. &amp; Sakunthala Sanil</p>
+    <p class="small" style="margin:0">Puthiyottil (H), Kaloor Thottooli, Kottooli P.O</p>
+    <div class="rule"></div>
+    <div style="letter-spacing:.35em;color:var(--rose)">JANUARY</div>
+    <div class="date"><span>SUNDAY</span><b class="disp">31</b><span>11:15 AM</span></div>
+    <div style="letter-spacing:.3em;color:var(--rose)">2027</div>
+  </div>
+</section>
+
+<section>
+  <h2 class="rv">Celebrations</h2>
+  <div class="card rv">
+    <h3 class="disp">Wedding</h3>
+    <p class="big">Sunday, 31 January 2027</p>
+    <p class="big">Muhurtham: 11:15 AM – 12:00 PM</p>
+    <p>Desaposhini Community Hall, Kuthiravattom, Calicut</p>
+  </div>
+  <div class="card rv">
+    <h3 class="disp">Reception</h3>
+    <p class="big">Monday, 1 February 2027</p>
+    <p class="big">5:00 PM – 9:00 PM</p>
+    <p>Desaposhini Community Hall, Kuthiravattom, Calicut</p>
+  </div>
+</section>
+
+<section>
+  <h2 class="rv">Countdown</h2>
+  <div class="cd rv">
+    <div><b id="d">00</b><span>DAYS</span></div>
+    <div><b id="h">00</b><span>HOURS</span></div>
+    <div><b id="m">00</b><span>MINS</span></div>
+    <div><b id="s">00</b><span>SECS</span></div>
+  </div>
+  <p class="rv" style="margin-top:20px">We can’t wait to celebrate with you</p>
+  <a class="btn rv" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Abhishek+%26+Anjusha+Wedding&amp;dates=20270131T054500Z/20270131T063000Z&amp;details=Reception+on+1+Feb+2027,+5-9+PM&amp;location=Desaposhini+Community+Hall,+Kuthiravattom,+Calicut">ADD TO CALENDAR</a>
+</section>
+
+<section>
+  <h2 class="rv">Meet Us Here</h2>
+  <div class="card rv">
+    <h3 class="disp" style="font-size:19px">Desaposhini Community Hall</h3>
+    <p>Kuthiravattom, Calicut</p>
+    <a class="btn fill" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Desaposhini+Community+Hall+Kuthiravattom+Calicut">VIEW LOCATION</a>
+  </div>
+</section>
+
+<footer class="rv">Best compliments from: Abhinand N. &amp; Family</footer>
+<div class="edge" style="transform:scaleY(-1)"></div>
+
+<script>
+var song=document.getElementById('song'),mus=document.getElementById('mus');
+function openInvite(){
+  var c=document.getElementById('cover');
+  c.classList.add('open');document.body.classList.remove('lock');
+  try{var p=song.play();if(p&&p.catch)p.catch(function(){});}catch(e){}
+  setTimeout(function(){c.classList.add('gone');},1700);
+}
+song.addEventListener('canplay',function(){mus.style.display='block';});
+song.addEventListener('error',function(){mus.style.display='none';});
+function toggleMusic(){if(song.paused){song.play();mus.textContent='♪';mus.style.opacity=1;}else{song.pause();mus.style.opacity=.5;}}
+// petals
+var pw=document.getElementById('petals');
+for(var i=0;i<16;i++){var s=document.createElement('span');s.className='p';
+s.style.left=Math.random()*100+'%';s.style.setProperty('--dx',(Math.random()*120-60)+'px');
+s.style.animationDuration=(9+Math.random()*9)+'s';s.style.animationDelay=(-Math.random()*14)+'s';
+s.style.transform='scale('+(.6+Math.random()*.9)+')';pw.appendChild(s);}
+// scroll reveal
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+// countdown
+var target=new Date('2027-01-31T11:15:00+05:30').getTime();
+function pad(n){return String(n).padStart(2,'0');}
+function tick(){var t=Math.max(0,target-Date.now());
+document.getElementById('d').textContent=pad(Math.floor(t/864e5));
+document.getElementById('h').textContent=pad(Math.floor(t%864e5/36e5));
+document.getElementById('m').textContent=pad(Math.floor(t%36e5/6e4));
+document.getElementById('s').textContent=pad(Math.floor(t%6e4/1e3));}
+tick();setInterval(tick,1000);
+</script>
+</body>
+</html>
